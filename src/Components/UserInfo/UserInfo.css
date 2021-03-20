@@ -1,0 +1,129 @@
+.product-detel{
+    width: 385px;
+    background: gray;
+    display: flex;
+    height: 89px;
+    margin: 47px;
+    border-radius: 8px;
+}
+.product-detel img{
+    width:64px;
+    margin-left: 25px;
+}
+.product-detel h4{
+    padding: 20px;
+    color: white;
+    margin-top: 5px;
+}
+.product{
+    display:flex;
+}
+.search{
+    height:250px;
+    padding: 30px;
+    border-radius: 9px;
+}
+.search-lacation{
+    width: 385px;
+    height: 121px;
+    border-radius: 8px;
+    color: white;
+    
+}
+.timeline{
+    background:greenyellow;
+    width: 4px;
+    height: 41px;
+    margin-left: 49px;
+    margin-top: -12px;
+    border-radius: 67px;
+    margin-bottom: -3px;
+}
+
+@media (max-width: 575.98px) { 
+    .product {
+        display: block;
+    }
+    .search{
+        width: 81%;
+        padding: 45px;
+    }
+    /* .map{
+        width: 83%;
+        width: 94%;
+        margin-left: 21px;
+      
+    } */
+    map{
+        margin-bottom: 20px;
+    }
+    .product-info{
+        margin-left: 39px;
+    }
+   }
+  
+  
+  @media (max-width: 767.98px) {
+    .product {
+        display: inline-grid;
+    }
+    .product-info{
+        margin-left: 129px;
+    }
+    map{
+        width: 83%;
+        width: 100%;
+        margin-left: 21px;
+    }
+    .search{
+        width: 100%;
+        padding: 47px;
+        margin-top: 41px;
+    }
+    .search label{
+        font-size: 30px;
+    }
+    /* .map{
+        width: 100%;
+    margin-left: 27px;
+    margin-bottom: 20px;
+    margin-top: 184px;
+    } */
+    }
+  
+  
+  @media (max-width: 991.98px) { 
+    .product {
+        display:inline-grid;;
+    }
+    .search label{
+        
+        margin: 0px;
+        
+    }
+    .product-detel {
+        width: 540px;
+        background: gray;
+        display: flex;
+        height: 89px;
+        margin: 47px;
+        border-radius: 8px;
+    }
+    .search{
+        width: 100%;
+        margin-left: 119px;
+        margin-top: 20px;
+    }
+    .map{
+        width: 100%;
+        margin-left: 132px;
+        margin-top: 20px;
+    }
+   }
+  
+  
+  @media (max-width: 1199.98px) { 
+   
+   
+  }
+  

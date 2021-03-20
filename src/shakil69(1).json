@@ -1,0 +1,4 @@
+[{"id":1,"name":"BIKE","date":"11/23/2020","image":"https://i.postimg.cc/yxnYtc8c/Frame.png","price":"$55"},
+{"id":2,"name":"BUS","date":"1/10/2021","image":"https://i.postimg.cc/v8vB4FtT/Frame-1.png","price":"$40"},
+{"id":3,"name":"CAR","date":"5/12/2020","image":"https://i.postimg.cc/PrrqZ3S4/Frame-2.png","price":"$20"},
+{"id":4,"name":"TRAIN","date":"6/30/2020","image":"https://i.postimg.cc/Pr35MWck/Group.png","price":"$45"}]
