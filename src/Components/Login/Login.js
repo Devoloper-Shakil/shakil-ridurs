@@ -1,19 +1,13 @@
 import React, { useContext } from 'react';
 import './Login.css';
 import firebaseConfig from './fierbase';
+import "firebase/auth";
 import firebase from "firebase/app";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-solid-svg-icons'
-
-import "firebase/auth";
 import { useHistory, useLocation } from 'react-router';
 import { userContext } from '../../App';
 import { faFacebook, faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons';
-
-
-
-
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -26,10 +20,7 @@ function Login() {
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
-    
-
     const provider = new firebase.auth.GoogleAuthProvider();
-
     const hendelGoogle = () => {
         firebase.auth()
             .signInWithPopup(provider)
@@ -38,8 +29,7 @@ function Login() {
                 const singUser = { name: displayName, email: email,photoURL:photoURL }
                 setLoginUser(singUser);
                 history.replace(from);
-
-              console.log(result.user)
+              // console.log(result.user)
             }).catch((error) => {
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -60,23 +50,14 @@ const hendelfb=()=>{
     const singUser = { name: displayName, email: email,photoURL:photoURL }
     setLoginUser(singUser);
     history.replace(from);
-
-
-  
-
-   
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     var email = error.email;
     var credential = error.credential;
-
-   
   });
 }
-
-
 
     return (
       <div className="login">
@@ -84,7 +65,6 @@ const hendelfb=()=>{
             <div>
                 <h1>LOGIN A SITE</h1>
                 <button  onClick={hendelGoogle} type="button" class="btn btn-success login-mathot"> <FontAwesomeIcon icon={faGooglePlusSquare} />  sing withe google</button>
-              
             </div> 
   
             <div> 

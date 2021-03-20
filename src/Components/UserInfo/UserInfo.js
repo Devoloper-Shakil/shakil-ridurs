@@ -1,25 +1,13 @@
 import React, { useContext, useState } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faUsers } from '@fortawesome/free-solid-svg-icons'
 import map from '../../images/Map.png';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './UserInfo.css'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-
-
-
-
-
-
 
 const UserInfo = (props) => {
-
-
     const { price, image, name } = props.product || {};
     const [newLocations, setNewLocations] = useState(false);
     const [loction,setLocation]=useState({
-     
         from:'',
         to:''
        })
@@ -65,10 +53,7 @@ const UserInfo = (props) => {
                         <h4>{price}</h4>
                     </div>
                 </div>
-           
-           
             </div>
-             
             :<div className="search bg-light w-25 mt-5 ms-5 float-start">
             <form action="">
                 <label htmlFor="">pick From</label>
@@ -80,14 +65,11 @@ const UserInfo = (props) => {
                 <input className="w-100 "  onBlur={searchLocatio} type="search" name="to" id="" />
                 <br />
                <input onClick={() => setNewLocations(true)} className="w-100 mt-4  bg-danger" type="submit" value="Search" />
-                {/* <input className="w-100 mt-4  bg-danger" type="submit" value="Search" /> */}
-
             </form>
-        </div>
-            
+        </div> 
             }
             <img className="w-50 m-5 mt-5 map" src={map} alt="" />
-        
+         
         </div>
     );
 };
