@@ -3,13 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faUsers } from '@fortawesome/free-solid-svg-icons'
 import map from '../../images/Map.png';
 import './UserInfo.css'
+import Map from '../Map/Map';
 
 const UserInfo = (props) => {
     const { price, image, name } = props.product || {};
     const [newLocations, setNewLocations] = useState(false);
     const [loction,setLocation]=useState({
         from:'',
-        to:''
+        to:'',
+        date:'',
        })
 
     const searchLocatio=(e)=>{
@@ -29,9 +31,11 @@ const UserInfo = (props) => {
             {newLocations? <div  >
                 <div className="product-info">
                 <div className="ms-5 mt-5 bg-primary p-2  search-lacation">
-                <h4 className="ms-5"> from:{loction.from}</h4>
-                  <h4 className="timeline"></h4>
-                   <h4 className="ms-5"> to:{loction.to}</h4>
+                <h4 className="ms-5 input"> from: {loction.from}</h4>
+                 
+                   <h4 className="ms-5 input"> to: {loction.to}</h4>
+                 
+                   <h4 className="ms-5 input"> date: {loction.date}</h4>
   
                 </div>
                     <div className="product-detel">
@@ -64,11 +68,18 @@ const UserInfo = (props) => {
                 <br />
                 <input className="w-100 "  onBlur={searchLocatio} type="search" name="to" id="" />
                 <br />
+                <label htmlFor="">pick Date</label>
+                <br/>
+               <input type="date"  className="w-100 "  onBlur={searchLocatio} name="date" id=""/>
                <input onClick={() => setNewLocations(true)} className="w-100 mt-4  bg-danger" type="submit" value="Search" />
             </form>
         </div> 
             }
-            <img className="w-50 m-5 mt-5 map" src={map} alt="" />
+            
+            <div className="w-50 m-5 mt-5 map">
+            <Map></Map>
+            </div>
+           
          
         </div>
     );

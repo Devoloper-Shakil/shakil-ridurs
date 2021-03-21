@@ -30,7 +30,7 @@
     color: white;
     
 }
-.timeline{
+/* .timeline{
     background:greenyellow;
     width: 4px;
     height: 41px;
@@ -38,6 +38,9 @@
     margin-top: -12px;
     border-radius: 67px;
     margin-bottom: -3px;
+} */
+.input{
+    text-transform: uppercase;
 }
 
 @media (max-width: 575.98px) { 
