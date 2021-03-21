@@ -4,7 +4,7 @@ import firebaseConfig from './fierbase';
 import "firebase/auth";
 import firebase from "firebase/app";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGoogle } from '@fortawesome/free-solid-svg-icons'
+// import { faGoogle } from '@fortawesome/free-solid-svg-icons'
 import { useHistory, useLocation } from 'react-router';
 import { userContext } from '../../App';
 import { faFacebook, faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +15,7 @@ if (!firebase.apps.length) {
   firebase.app(); // if already initialized, use that one
 }
 
-function Login() {
+function Login() { 
     const [loginUser, setLoginUser] = useContext(userContext);
     let history = useHistory();
     let location = useLocation();
@@ -34,7 +34,7 @@ function Login() {
                 var errorCode = error.code;
                 var errorMessage = error.message;
                 var email = error.email;
-                var credential = error.credential;
+                var credential = error.credential; 
 
             });
     }
