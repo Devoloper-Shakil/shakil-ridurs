@@ -16,7 +16,7 @@ import Heder from "./Components/Heder/Heder";
 import Login from "./Components/Login/Login";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import UserPick from "./Components/UserPick/UserPick";
-
+import NotFount from "./Components/NotFount/NotFount";
 export const userContext = createContext();
 function App() {
   const [loginUser, setLoginUser] = useState({});
@@ -38,7 +38,8 @@ function App() {
             <UserPick></UserPick>
           </PrivateRoute>
           <PrivateRoute path="/destintion">
-            <UserPick></UserPick>
+          
+            <NotFount></NotFount>
           </PrivateRoute>
         </Switch>
       </Router>
