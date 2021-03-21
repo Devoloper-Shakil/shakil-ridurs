@@ -31,10 +31,10 @@ const Heder = () => {
                         <li className="nav-item">
                             <Link className="nav-link " to="/contact" >Contact</Link>
                         </li>
-                        <li>
-                            <img  className="rounded-circle w-25 ms-3" src={loginUser.photoURL} alt=""/>
+                        <li className="nav-item">
+                            <img  className="rounded-circle  w-25 ms-3" src={loginUser.photoURL} alt=""/>
                         </li>
-                        <li>
+                        <li >
                             <p  className="user-name">{loginUser.name}</p>
                         </li>
                         <li className="nav-item">

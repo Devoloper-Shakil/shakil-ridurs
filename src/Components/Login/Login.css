@@ -66,4 +66,14 @@
     }
    
   }
+  @media (max-width: 360px) { 
+    .login{
+        width: 90%;
+    }
+    .login-mathot {
+        width: 90%;
+        font-size: 20px;
+    }
+  }
+  
   

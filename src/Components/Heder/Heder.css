@@ -6,3 +6,22 @@
 .user-name{
     margin-left: -48px;
 }
+
+@media (max-width: 360px) { 
+    .navbar-brand{
+        width:100%;
+      
+    }
+    .nav-item a{
+        margin-left: -350px;
+    }
+    .user-name{
+        margin-left: -340px;
+    }
+   
+   
+    .navbar-brand img{
+        width:100%;
+        margin-left: 5px;
+    }
+  }
